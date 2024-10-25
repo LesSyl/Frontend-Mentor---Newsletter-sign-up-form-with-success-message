@@ -32,6 +32,11 @@ body {
 	color: $text-color;
 }
 
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .card {
 	visibility: visible;
 	// visibility: hidden;
@@ -186,11 +191,7 @@ body {
 		align-items: center;
 		background-color: $body-color;
 	}
-	.wrapper {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+	
 	.card {
 		position: relative;
 		display: flex;
@@ -253,6 +254,10 @@ body {
 		}
 	}
 	.popup {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%,-50%);
 		justify-content: start;
 		height: 350px;
 		width: 300px;
