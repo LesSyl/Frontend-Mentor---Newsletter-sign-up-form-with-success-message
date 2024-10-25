@@ -18,7 +18,6 @@ const showError = () => {
 
 const showUserEmail = () => {
 	const userEmail = document.querySelector('.popup__text-userEmail')
-
 	userEmail.textContent = formBoxInput.value
 }
 
@@ -42,6 +41,7 @@ const showPopup = () => {
 const closePopup = () => {
 	popup.classList.remove('popup-active')
 	card.style.visibility = 'visible'
+    formBoxInput.value = ''
 }
 subscribeBtn.addEventListener('click', e => {
 	e.preventDefault()

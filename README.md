@@ -29,7 +29,7 @@ Mobile
 
 - Repository URL:[GitHub](https://github.com/LesSyl/Newsletter-sign-up-form-with-success-message)
 - Solution URL: [Frontendmentor]()
-- Live Site URL: [Live](https://lessyl.github.io/Newsletter-sign-up-form-with-success-)
+- Live Site URL: [Live](https://lessyl.github.io/Newsletter-sign-up-form-with-success-message/)
 ## My process
 
 ### Built with
