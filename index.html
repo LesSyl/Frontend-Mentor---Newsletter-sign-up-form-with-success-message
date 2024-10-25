@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="dist/css/main.min.css">
+</head>
+
+<body>
+
+
+
+  <!-- OBRAZ////////////////////////////// -->
+  <div class="wrapper">
+
+    <div class="card">
+      <header class="header">
+        <img class="header__mobile" src="dist/img/illustration-sign-up-mobile.svg"
+          alt="A start-up image in orange and yellow, showing the screen, files and graphs.">
+        <img class="header__desktop" src="../dist/img/illustration-sign-up-desktop.svg"
+          alt="A start-up image in orange and yellow, showing the screen, files and graphs.">
+      </header>
+      <main class="main">
+        <!-- TEKST/////////////////////////////// -->
+        <h1 class="main__title">Stay updated!</h1>
+        <p class="main__text">Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul class="main__list">
+          <li class="main__list-example">
+            <img src="dist/img/icon-list.svg" alt="tick" class="main__list-example-img">
+            <p class="main__list-example-text">Product discovery and building what
+              matters</p>
+          </li>
+          <li class="main__list-example">
+            <img src="dist/img/icon-list.svg" alt="tick" class="main__list-example-img">
+            <p class="main__list-example-text">Measuring to ensure updates are a
+              success</p>
+          </li>
+          <li class="main__list-example">
+            <img src="dist/img/icon-list.svg" alt="tick" class="main__list-example-img">
+            <p class="main__list-example-text">And much more!</p>
+          </li>
+        </ul>
+
+        <!-- FORMULARZ///////////////////////////////// -->
+        <form>
+          <div class="form-box">
+            <label for="email" class="form-box__label">Email address</label>
+            <input type="email" id="email" placeholder="email@company.com" class="form-box__input">
+            <p class="error hidden">Valid email required</p>
+          </div>
+          <button class="subscribe">Subscribe to monthly newsletter</button>
+        </form>
+      </main>
+    </div>
+
+    <!-- POPUP///////////////////////////////////////// -->
+
+    <div class="popup">
+      <img src="dist/img/icon-success.svg" alt="tick" class="popup__img">
+      <h2 class="popup__title">Thanks for subscribing!</h2>
+      <p class="popup__text">A confirmation email has been sent to <span
+          class="popup__text-userEmail"></span> Please open it and click the button inside to
+        confirm your subscription</p>
+      <button class="popup__button">Dismiss message</button>
+    </div>
+  </div>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        class="attribution__link attribution__link-one">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/LesSyl" target="_blank"
+        class="attribution__link attribution__link-two">LesSyl</a>.
+</footer>
+  <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+@use 'colors' as *;
+@use 'footer' as *;
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+::-webkit-input-placeholder {
+	color: $border-color;
+	font-size: .8rem;
+}
+
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+img,
+svg {
+	display: block;
+	max-width: 100%;
+}
+button {
+	font: inherit;
+}
+img {
+	max-inline-size: 100%;
+	max-block-size: 100%;
+}
+ul {
+	padding-inline-start: 0;
+}
+
+
