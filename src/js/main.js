@@ -16,13 +16,20 @@ const showError = () => {
 	formBoxInput.classList.add('input-error')
 }
 
+const showUserEmail = () => {
+	const userEmail = document.querySelector('.popup__text-userEmail')
+
+	userEmail.textContent = formBoxInput.value
+}
+
 const checkMail = email => {
 	const re =
 		/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
 
 	if (re.test(inputEmail.value)) {
 		clearError()
-        showPopup()
+		showPopup()
+		showUserEmail()
 	} else {
 		showError()
 	}
@@ -30,15 +37,14 @@ const checkMail = email => {
 
 const showPopup = () => {
 	popup.classList.add('popup-active')
-	card.style.visibility='hidden'
+	card.style.visibility = 'hidden'
 }
 const closePopup = () => {
-    popup.classList.remove('popup-active')
-	card.style.visibility='visible'
+	popup.classList.remove('popup-active')
+	card.style.visibility = 'visible'
 }
 subscribeBtn.addEventListener('click', e => {
 	e.preventDefault()
 	checkMail(email)
-
 })
 popupBtn.addEventListener('click', closePopup)
