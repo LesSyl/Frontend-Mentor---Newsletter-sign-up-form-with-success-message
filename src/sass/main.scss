@@ -1,12 +1,10 @@
 @use 'reset';
 @use 'footer' as *;
 @use 'colors' as *;
-
 :root {
 	--regular-font: 'robotoregular', sans-serif;
 	--bold-font: 'robotobold', sans-serif;
 }
-
 @font-face {
 	font-family: 'robotoregular';
 	src: url('../../fonts/roboto-regular-webfont.woff2') format('woff2'),
@@ -23,7 +21,6 @@
 	font-style: normal;
 	font-display: swap;
 }
-
 body {
 	position: relative;
 	min-height: 100vh;
@@ -31,7 +28,6 @@ body {
 	line-height: 1.5;
 	color: $text-color;
 }
-
 .wrapper {
 	display: flex;
 	justify-content: center;
@@ -39,11 +35,9 @@ body {
 }
 .card {
 	visibility: visible;
-	// visibility: hidden;
 	background-color: $white;
 	border-radius: 2em;
 }
-
 .header {
 	&__mobile {
 		width: 100%;
@@ -52,23 +46,22 @@ body {
 		display: none;
 	}
 }
-
 .main {
 	margin: 1.6em;
 	&__title {
-		font-size: 2rem;
+		font-size: 2.4rem;
 		font-family: var(--bold-font);
 	}
 	&__text {
-		font-size: 0.9rem;
-		margin: 1em 0;
+		font-size: 1rem;
+		margin: 1.5em 0;
 	}
 	&__list {
 		&-example {
 			display: flex;
 			justify-content: start;
 			align-items: start;
-			font-size: 0.9rem;
+			font-size: 1rem;
 			margin-bottom: 0.8em;
 			list-style: none;
 			&-img {
@@ -79,12 +72,11 @@ body {
 		}
 	}
 }
-
 .form-box__input,
 .subscribe,
 .popup__button {
 	width: 100%;
-	font-size: .7rem;
+	font-size: 0.7rem;
 	font-family: var(--regular-font);
 	border-radius: 0.5em;
 	cursor: pointer;
@@ -94,21 +86,18 @@ body {
 	padding: 1.2em;
 }
 .subscribe {
-	margin: 1em 0 2em 0;
+	margin: 1.5em 0 2em 0;
 	border: none;
 }
-
 .subscribe,
 .popup__button {
 	color: $white;
 	background-color: $body-color;
 	&:hover {
-		background: rgb(255, 89, 105);
-		background: linear-gradient(90deg, rgba(255, 89, 105, 1) 300px, rgb(27, 26, 26) 100%);
-		box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+		background: linear-gradient(90deg, rgba(255, 89, 105, 1) 0%, rgb(255, 105, 62) 100%);
+		box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.4);
 	}
 }
-
 .form-box {
 	position: relative;
 	display: flex;
@@ -119,13 +108,12 @@ body {
 	&__label {
 		font-family: var(--bold-font);
 		font-size: 0.7rem;
-		margin-bottom: 0.3em;
+		margin: 2em 0 0.3em 0;
 	}
 	&__input {
 		border: 1px solid $border-color;
 	}
 }
-
 .error {
 	position: absolute;
 	top: 0;
@@ -135,18 +123,15 @@ body {
 	color: $tomato;
 	visibility: visible;
 }
-
 .hidden {
 	visibility: hidden;
 }
-
 .input-error {
 	border: 1px solid $tomato;
 	border-radius: 0.5em;
-	box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+	box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.4);
 	background-color: $input-color;
 }
-
 .popup {
 	position: absolute;
 	top: 0;
@@ -191,12 +176,11 @@ body {
 		align-items: center;
 		background-color: $body-color;
 	}
-	
 	.card {
 		position: relative;
 		display: flex;
-		width: 540px;
-		height: 350px;
+		width: 730px;
+		height: 543px;
 		.header {
 			&__mobile {
 				display: none;
@@ -211,74 +195,111 @@ body {
 		}
 		.main {
 			width: 40%;
-			margin: 2em 3em 1em 2em;
+			margin: 3em 3em 0 3em;
 			&__title {
-				font-size: 2rem;
+				font-size: 2.6rem;
 			}
-			&__text {
-				margin-top: 0.7em;
-				font-size: 0.7rem;
-			}
+
 			&__list {
-				margin-top: 1em;
-				margin-bottom: 0;
 				&-example {
-					margin-bottom: 0.5em;
-					&-img {
-						margin-right: 0.5em;
-						width: 0.8em;
-					}
 					&-text {
-						font-size: 0.6rem;
+						font-size: 1rem;
 					}
 				}
 			}
 		}
 		.form-box {
-			margin-top: 1em;
+			margin-top: 0;
 			&__label {
-				font-size: 0.5rem;
+				margin-top: 0.5em;
+				font-size: 0.7rem;
 			}
 		}
 		.form-box__input,
 		.subscribe {
-			padding: .8em;
-			font-size: 0.7rem;
+			padding: 0.8em;
+			font-size: 0.8rem;
 		}
 
 		::placeholder {
-			font-size: 0.7rem;
+			font-size: 0.8rem;
 		}
 		.error {
 			font-size: 0.7rem;
 		}
 	}
+	.popup__button {
+		padding: 1em;
+	}
 	.popup {
 		position: absolute;
 		top: 40%;
 		left: 50%;
-		transform: translate(-50%,-50%);
+		transform: translate(-50%, -50%);
 		justify-content: start;
-		height: 350px;
-		width: 300px;
+		height: 450px;
+		width: 400px;
 		padding: 2em;
 		border-radius: 2em;
 		&__img {
-			width: 1.8em;
+			width: 2em;
 			margin-bottom: 1.5em;
 		}
 		&__title {
 			margin: 0;
-			font-size: 2.3rem;
+			font-size: 2.8rem;
 		}
 		&__text {
 			margin-top: 2em;
-			font-size: 0.7rem;
+			font-size: 1rem;
 		}
 		&__button {
-			font-size: 0.8rem;
+			font-size: 0.9rem;
 			margin: 4em 0 0 0;
 			border: none;
+		}
+	}
+}
+
+@media (width >= 62em) {
+	.card {
+		width: 930px;
+		height: 643px;
+		.main {
+			margin: 5em 3em 1em 3em;
+			&__title {
+				font-size: 3.5rem;
+			}
+			&__text {
+				margin-top: 2em;
+				font-size: 1rem;
+			}
+			&__list {
+				margin-top: 1.5em;
+				margin-bottom: 0;
+				&-example {
+					margin-bottom: 1em;
+					&-img {
+						margin-right: 0.8em;
+						width: 1em;
+					}
+					&-text {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+		.form-box {
+			margin-top: 1.5em;
+		}
+		.form-box__input,
+		.subscribe {
+			padding: 1em;
+			font-size: 1rem;
+		}
+
+		::placeholder {
+			font-size: 1rem;
 		}
 	}
 }
